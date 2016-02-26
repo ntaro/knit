@@ -1,12 +1,13 @@
 # knit [![Circle CI](https://circleci.com/gh/ntaro/knit/tree/master.svg?style=shield)](https://circleci.com/gh/ntaro/knit/tree/master) [ ![Download](https://api.bintray.com/packages/ngsw-taro/maven/knit/images/download.svg) ](https://bintray.com/ngsw-taro/maven/knit/_latestVersion)
 
-JUnit API set for Kotlin.
+JUnit and Mockito API set for Kotlin.
 
 ```kotlin
 class UnitTest {
     @Test
     fun test() {
-        (1 + 2).should be 3  // assertThat(1 + 2, `is`(3))
+        (1 + 2).should be 3            // assertThat(1 + 2, `is`(3))
+        module.hello() returns "Hello" // when(module.hello()).thenReturn("Hello")
     }
 }
 ```
